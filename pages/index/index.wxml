@@ -1,0 +1,29 @@
+<!--index.wxml-->
+
+<swiper class="swiper" data-width="{{windowWidth}}" data-imgsize="{{imgSize}}" bindchange='{{test.change}}' bindanimationfinish="{{test.animationFinish}}" bindtransition="{{test.func}}" indicator-dots="{{indicatorDots}}"
+  autoplay="{{true}}" interval="{{interval}}" circular='' duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item style="height:100%;">
+      <image src="{{item}}" class="slide-image" style="height:100%;width:100%;" mode="center" height="300"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  <wxs module="test" src="./index.wxs"></wxs>
+
+<wxs module="wxs" src="./test.wxs"></wxs>
+<view id="tapTest" data-hi="WeChat" bindtap="{{wxs.tapName}}"> Click me! </view>
+
+</view>

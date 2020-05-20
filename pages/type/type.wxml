@@ -1,0 +1,12 @@
+<!--pages/type/type.wxml-->
+  <view class="container">
+  <view class="icon-box-ctn">
+     <view>
+      <block >
+        <icon type="{{search}}" size="{{iconSize}}"/>
+        <icon type="{{clear}}" size="{{iconSize}}"/>
+      </block>搜索</view>
+  </view>
+</view>
+
+<view id="tapTest" data-hi="WeChat" bindtap="tapName"> Click me! </view>
