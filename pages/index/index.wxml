@@ -1,5 +1,3 @@
-<!--index.wxml-->
-
 <swiper class="swiper" data-width="{{windowWidth}}" data-imgsize="{{imgSize}}" bindchange='{{test.change}}' bindanimationfinish="{{test.animationFinish}}" bindtransition="{{test.func}}" indicator-dots="{{indicatorDots}}"
   autoplay="{{true}}" interval="{{interval}}" circular='' duration="{{duration}}">
   <block wx:for="{{imgUrls}}">
@@ -25,5 +23,19 @@
 
 <wxs module="wxs" src="./test.wxs"></wxs>
 <view id="tapTest" data-hi="WeChat" bindtap="{{wxs.tapName}}"> Click me! </view>
-
 </view>
+
+<!--如果通过 WXFOR 遍历数组 内部元素通过一个特性的变量名 item 来获取-->
+<block wx:for="{{setItems}}">
+<view class="courseItem {{item.isStar ? 'Star':''}}">
+  <view class="fm">
+    <image src="{{item.IndexImg}}" mode="aspectFill"/>
+  </view>
+  <view class="desc">
+    <text class="courseTitle">{{item.IndexTitle}}</text>
+    <text class="courseTeacher">讲师：{{item.IndexTeacher}}<text class="isStar" wx:if="{{item.isStar}}">  星级讲师</text></text>
+    <text class="courseStudyCount">学习人数：{{item.IndexCount >=1000 ? item.IndexCount/1000 + "K" : item.IndexCount}}人</text>
+  </view>
+</view>
+</block>
+

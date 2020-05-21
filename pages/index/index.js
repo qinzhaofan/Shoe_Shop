@@ -36,7 +36,7 @@ Page({
     imgSize: [{
       height: 150
     }, {
-      height: 200
+      height: 150
     }, {
       height: 150
     }, {
@@ -47,7 +47,24 @@ Page({
     interval: 3000,
     duration: 500,
     left: 0,
-    windowWidth: windowWidth
+    windowWidth: windowWidth,
+    //数据绑定
+      setItems: [
+        {
+          IndexImg: "/images/1.jpg",
+          IndexTitle: "标题测试",
+          IndexTeacher:"秦测试",
+          IndexCount: 1500,
+          isStar: true,
+        },{
+          IndexImg: "/images/2.jpg",
+          IndexTitle: "前端测试",
+          IndexTeacher:"张测试",
+          IndexCount: 3200,
+          isStar: false,
+        }
+
+      ]
     
   },
   //事件处理函数  
