@@ -130,12 +130,27 @@ Page({
             //that.queryUsreInfo();
             
             console.log("正确存入："+getApp().getGlobalUserInfo().nickName)
-          
+            //正确登录后 并且 存入后台 跳转首页
+            wx.switchTab({
+              url: '../index/index',
+            })
+          },
+          fail: function(error){
+            //网络失败
+            wx.showModal({
+              title:'警告',
+              content:'网络请求失败请稍后之后再进入!!!',
+              showCancel:false,
+              confirmText:'返回',
+              success:function(res){
+              if (res.confirm) {
+                console.log('因为login网络失败用户点击了“返回”')
+              } 
+              }
+     })
           }
         });
-        wx.switchTab({
-          url: '../index/index',
-        })
+        
       },
       complete: (res) => {console.log('执行登录完成')},
     })

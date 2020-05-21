@@ -118,17 +118,59 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    console.log('没有有登录状态： 只设置tabbar'+this.getTabBar)
       if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
       this.getTabBar().setData({
         selected: 0
       })
     }
-    this.setData({
-      userInfo: getApp().getGlobalUserInfo(),
-      hasUserInfo: true
+     // 获取用户信息
+     wx.getSetting({
+      success: res => {
+        console.log("用户登录信息："+res.authSetting['scope.userInfo'])
+        if (res.authSetting['scope.userInfo']) {
+          console.log("授权了")
+          // 已经授权
+          wx.getUserInfo({
+            success: res => {
+              // 可以将 res 发送给后台解码出 unionId
+              //this.globalData.userInfo = res.userInfo
+              console.log( getApp().getGlobalUserInfo())
+              //直接调用 getUserInfo 获取头像昵称，不会弹框
+              this.setData({
+                userInfo: getApp().getGlobalUserInfo(),
+                
+                hasUserInfo: true
+              })
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              if (this.userInfoReadyCallback) {
+                this.userInfoReadyCallback(res)
+              }
+               //用户已经授权过 跳转到首页
+            wx.switchTab({
+              url: '../index/index'
+            })
+            },function(res){
+              console.log("网络请求失败！")
+            }
+          })
+        } else if (!res.authSetting['scope.userInfo']) {
+          console.log("未授权")
+          wx.redirectTo({//可以返回但在login画面隐藏了主页返回的按钮
+          url: '/pages/login/login',
+          success:function (res) {
+            console.log(res)
+          },
+          fail:function (res) {
+            console.log(res)
+          },
+          })
+          console.log("跳转后")
+        }
+      }
     })
+   
   },
 
   /**
