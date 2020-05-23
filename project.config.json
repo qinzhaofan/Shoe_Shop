@@ -70,6 +70,14 @@
 					"id": -1,
 					"name": "pages/index/index",
 					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shoes-Item",
+					"pathName": "pages/shoes-Item/shoes-Item",
+					"query": "",
 					"scene": null
 				}
 			]

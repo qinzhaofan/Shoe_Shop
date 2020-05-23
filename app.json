@@ -1,14 +1,16 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/type/type",
+    "pages/merchants/merchants",
     "pages/login/login",
     "pages/logs/logs",
-    "pages/merchants/merchants",
-    "pages/type/type"
+    "pages/shoes-Item/shoes-Item"
+
    
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#e2e0e0",
     "navigationBarTitleText": "测试程序",
     "navigationBarTextStyle": "black",
@@ -19,7 +21,6 @@
  
   "tabBar": {
     "custom": true,
-  
     "list": [
       {
         "pagePath": "pages/index/index",

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "x-shoes-Item":"/components/x-shoes-Item"
+  }
+}

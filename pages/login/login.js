@@ -145,9 +145,9 @@ Page({
               success:function(res){
               if (res.confirm) {
                 console.log('因为login网络失败用户点击了“返回”')
-              } 
-              }
-     })
+                } 
+               }
+              })
           }
         });
         

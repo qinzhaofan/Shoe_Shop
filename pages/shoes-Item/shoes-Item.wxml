@@ -1,0 +1,11 @@
+<!--pages/shoes-Item/shoes-Item.wxml-->
+<view class="ItemContainer">
+<x-shoes-Item/>
+<x-shoes-Item/>
+<x-shoes-Item/>
+<x-shoes-Item/>
+<x-shoes-Item/>
+<x-shoes-Item/>
+<x-shoes-Item/>
+<x-shoes-Item/>
+</view>

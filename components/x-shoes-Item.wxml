@@ -1,0 +1,6 @@
+<view class="shoesItem">
+  <image src="/images/index/1.jpg" mode="aspectFit"/>
+  <text class="type">类型：男鞋</text>
+  <text class="model">型号：NX-H001</text>
+  <text>参考价格：<text class="price">100￥</text></text>
+</view>

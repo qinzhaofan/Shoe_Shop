@@ -1,12 +1,12 @@
 <swiper class="swiper" data-width="{{windowWidth}}" data-imgsize="{{imgSize}}" bindchange='{{test.change}}' bindanimationfinish="{{test.animationFinish}}" bindtransition="{{test.func}}" indicator-dots="{{indicatorDots}}"
-  autoplay="{{true}}" interval="{{interval}}" circular='' duration="{{duration}}">
-  <block wx:for="{{imgUrls}}">
+  autoplay="{{true}}" interval="{{interval}}" circular='' duration="{{duration}} ">
+  <block wx:for="{{imgUrls}}" wx:key="imgUrls">
     <swiper-item style="height:100%;">
       <image src="{{item}}" class="slide-image" style="height:100%;width:100%;" mode="center" height="300"/>
     </swiper-item>
   </block>
 </swiper>
-
+<!--
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -24,18 +24,24 @@
 <wxs module="wxs" src="./test.wxs"></wxs>
 <view id="tapTest" data-hi="WeChat" bindtap="{{wxs.tapName}}"> Click me! </view>
 </view>
-
+-->
 <!--如果通过 WXFOR 遍历数组 内部元素通过一个特性的变量名 item 来获取-->
-<block wx:for="{{setItems}}">
-<view class="courseItem {{item.isStar ? 'Star':''}}">
+<block wx:for="{{setItems}}" wx:for-index="idx" wx:for-item="var" wx:key="id">
+<view class="courseItem {{var.isStar ? 'Star':''}}">
   <view class="fm">
-    <image src="{{item.IndexImg}}" mode="aspectFill"/>
+    <image src="{{var.IndexImg}}" mode="aspectFill"/>
   </view>
   <view class="desc">
-    <text class="courseTitle">{{item.IndexTitle}}</text>
-    <text class="courseTeacher">讲师：{{item.IndexTeacher}}<text class="isStar" wx:if="{{item.isStar}}">  星级讲师</text></text>
-    <text class="courseStudyCount">学习人数：{{item.IndexCount >=1000 ? item.IndexCount/1000 + "K" : item.IndexCount}}人</text>
+    <text class="courseTitle">{{var.IndexTitle}}</text>
+    <text class="courseTeacher">讲师：{{var.IndexTeacher}}<text class="isStar" wx:if="{{var.isStar}}">  星级讲师</text></text>
+    <text class="courseStudyCount">学习人数：{{var.IndexCount >=1000 ? var.IndexCount/1000 + "K" : var.IndexCount}}人</text>
+    <text>{{idx}}</text>
   </view>
 </view>
 </block>
+<block wx:for="{{testkeyData}}" wx:key="*this">
+  <switch/>
+  <text>{{item}}</text>
+</block>
+<button bindtap="_handlerTap">点击增加</button>
 

@@ -1,0 +1,31 @@
+.shoesItem{
+  /*border:1px solid gold;
+  border-radius: 5px;*/
+  width: 170px;
+  height: 250px;
+  font-size: 14px;
+  background:white;
+  color: gray;
+  padding-top: 20px;
+  margin: 8px 0;
+  border-radius: 10px;
+}
+.shoesItem image{
+  width: 170px;
+  height: 150px;
+  box-sizing: border-box;
+}
+.shoesItem text{
+  display: block;  
+  padding-left: 10px;
+  margin-top: 3px;
+}
+.shoesItem .type{
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+.shoesItem .price{
+  display: inline;
+  color: red;
+}

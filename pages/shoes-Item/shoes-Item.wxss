@@ -1,0 +1,9 @@
+/* pages/shoes-Item/shoes-Item.wxss */
+
+.ItemContainer{
+/*  background:rgba(245, 244, 244, 0.534);*/
+background: chartreuse;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

@@ -30,5 +30,20 @@ App({
   //获取用户userInfo信息
     getGlobalUserInfo:function(){
     return wx.getStorageSync('userInfo')
+  },
+  /**
+   * 下拉刷新
+   */
+  onPullDownRefresh: function(e) {    
+   console.log( "刷新" )   
+   this.onLoad(); 
+   //wx.stopPullDownRefresh();
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function () {
+    wx.stopPullDownRefresh();
   }
+
 })
