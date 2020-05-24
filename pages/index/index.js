@@ -51,7 +51,38 @@ Page({
 
     testkeyData: [
         "a","b","c"
-    ]
+    ],
+    /*引入ShoesItem插件数据*/
+    shoesItems:[
+      {
+      id :1,
+      shoesImg:"/images/index/1.jpg",
+      type:"春款女鞋",
+      model:"CT-H002",
+      price:"109"
+    },
+    {
+      id :2,
+      shoesImg:"/images/index/2.jpg",
+      type:"夏款女鞋",
+      model:"XT-H004",
+      price:"68"
+    },
+    {
+      id :3,
+      shoesImg:"/images/index/3.jpg",
+      type:"秋款女鞋",
+      model:"QT-H005",
+      price:"128"
+    },
+    {
+      id :4,
+      shoesImg:"/images/index/4.jpg",
+      type:"冬款女鞋",
+      model:"QT-H005",
+      price:"228"
+    }
+  ]
    
     
   },
@@ -173,7 +204,7 @@ Page({
         } else if (!res.authSetting['scope.userInfo']) {
           console.log("未授权")
           wx.redirectTo({//可以返回但在login画面隐藏了主页返回的按钮
-          url: '/pages/login/login',
+          /*url: '/pages/login/login',*/
           success:function (res) {
             console.log(res)
           },

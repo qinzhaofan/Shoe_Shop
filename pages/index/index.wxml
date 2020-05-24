@@ -38,12 +38,7 @@
   <!--<image src="/images/index/hotcommodities1.png" mode="aspectFit"/>-->
    <image src="/images/index/hotcommodities.png" mode="aspectFit"/>
 </view>
-<x-shoes-Item/>
-<x-shoes-Item/>
-<x-shoes-Item/>
-<x-shoes-Item/>
-<x-shoes-Item/>
-<x-shoes-Item/>
-<x-shoes-Item/>
-<x-shoes-Item/>
+<block wx:for="{{shoesItems}}" wx:key="id">
+<x-shoes-Item shoesItem="{{item}}"/>
+</block>
 </view>

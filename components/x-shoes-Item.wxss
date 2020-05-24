@@ -24,8 +24,17 @@
   font-weight: bold;
   font-size: 16px;
   color: black;
+  display: inline;
+}
+.shoesItem .model{
+  display: inline;
 }
 .shoesItem .price{
   display: inline;
   color: red;
+}
+.shoesItem .priceweight{
+  display: inline;
+  color: red;
+  font-weight: bold;
 }
