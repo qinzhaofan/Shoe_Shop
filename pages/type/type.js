@@ -22,7 +22,34 @@ pageLifetimes: {
     iconSize: 20,
     iconColor: 'rgb(108,207,255)' ,
     search:'search', 
-    clear :'clear'
+    clear :'clear',
+     //数据绑定
+     setItems: [
+      {
+        id:"0",
+        IndexImg: "/images/1.jpg",
+        IndexTitle: "标题测试",
+        IndexTeacher:"秦测试",
+        IndexCount: 1500,
+        isStar: true,
+      },{
+        id:"1",
+        IndexImg: "/images/2.jpg",
+        IndexTitle: "前端测试",
+        IndexTeacher:"张测试",
+        IndexCount: 3200,
+        isStar: false,
+      }
+
+    ]
+  },
+  _handlerTap:function(){
+    //动态修改数据源
+   // this.data.testkeyData.push("d")//尾部追加
+    this.data.testkeyData.unshift("d")//前部追加
+    this.setData({
+      testkeyData: this.data.testkeyData
+    })
   },
 /**
  * bindtap 当用户点击事件 param:tapName
@@ -41,7 +68,22 @@ pageLifetimes: {
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    setTimeout(() => {
+      console.log("3秒计时器")
+      this.data.setItems.push({
+        id:"2",
+        IndexImg: "/images/3.jpg",
+        IndexTitle: "动态测试",
+        IndexTeacher:"张测试",
+        IndexCount: 11200,
+        isStar: true,
+      })
+      //更新画面数据
+      this.setData({ 
+        setItems:this.data.setItems
+      })
+     
+    }, 3000);
   },
 
   /**

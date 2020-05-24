@@ -28,55 +28,28 @@
 .swiper {
   width: 100%
 }
-/*数据绑定*/
-.courseItem{
-  height: 120px;
-  border-bottom: 5px solid red;
-  display: flex;
+/*x-item插件*/
+.ItemContainer{
+  background:rgb(233, 233, 233);
+  display: flex;/*行显示*/
+  justify-content: space-evenly;/*按比例分配空间*/
+  flex-wrap: wrap;/*行显示转列*/
 }
-.courseItem.Star{
-  border-bottom-color: gold ;
-}
-.courseItem .fm{
-  width: 150px;
+/*热销产品图片*/
+.ItemContainer .img {
+  /*margin-top:10px;
+  margin-bottom: 5px;
+  height: 60px;
+  width: 94%;
+  background: white;
+  */
+  margin-top:10px;
   height: 100px;
-  background-color: orange;
-  margin: 10px;
-  margin-right: 0;
+  width: 94%;
+  background: white;
 }
-.courseItem .fm image{
-  width: 100%;
-  height: 100%;
-}
-.courseItem .desc{
-  flex: 1;
-  /*background-color: cyan;*/
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.courseItem .desc text{
-  font-size: 13px;
- 
-}
-
-.courseItem .desc .isStar{
-  color: tomato;
-  font-weight: bold;
-}
-
-.courseItem .desc .courseTitle{
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.courseItem .desc .courseTeacher{
-  color: gray;
-}
-
-
-.courseItem .desc .courseStudyCount{
-  color: red;
+.ItemContainer .img image{
+  height: 100px;
+  width: 300px;
+  margin: 0 35px;
 }

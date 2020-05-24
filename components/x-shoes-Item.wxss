@@ -1,8 +1,8 @@
 .shoesItem{
   /*border:1px solid gold;
   border-radius: 5px;*/
-  width: 170px;
-  height: 250px;
+  width: 340rpx;
+  height: 500rpx;
   font-size: 14px;
   background:white;
   color: gray;
@@ -11,8 +11,8 @@
   border-radius: 10px;
 }
 .shoesItem image{
-  width: 170px;
-  height: 150px;
+  width: 340rpx;
+  height: 300rpx;
   box-sizing: border-box;
 }
 .shoesItem text{
