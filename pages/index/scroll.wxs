@@ -9,8 +9,8 @@ var funcA = function (e, ins) {
   var scrollTop = e.detail.scrollTop
  
     ins.selectComponent('.page-group').setStyle({
-      //"background-color": 'rgb(255, 255, 255)',
-      "background-color": 'red'
+      "background-color": 'rgb(255, 255, 255)',
+     // "background-color": 'red'
     })
   
 }

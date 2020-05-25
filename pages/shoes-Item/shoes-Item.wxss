@@ -6,3 +6,30 @@
   justify-content: space-evenly;/*按比例分配空间*/
   flex-wrap: wrap;/*行显示转列*/
 }
+
+.deleteItem{
+  animation: It-dou 1s 0s infinite;/*抖动1秒 延迟0 infinite无限循环*/
+}
+@keyframes It-dou{
+  0% {
+    transform: rotate(0deg);
+  }
+  10%,20%,30% {
+    transform: rotate(-4deg);
+  }
+  15%,25%,35%{
+    transform: rotate(4deg);
+  }
+  40%{
+    transform: rotate(-2deg);
+  }
+  45%{
+    transform: rotate(2deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}

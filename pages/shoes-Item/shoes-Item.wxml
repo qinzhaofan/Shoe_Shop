@@ -1,7 +1,7 @@
 <!--pages/shoes-Item/shoes-Item.wxml-->
-<view class="ItemContainer">
-<block wx:for="{{shoesItems}}" wx:key="id">
-<x-shoes-Item shoesItem="{{item}}"/>
+<view class="ItemContainer" >
+<block wx:for="{{shoesItems}}" wx:key="id"  >
+<x-shoes-Item   shoesItem="{{item}}"/>
 </block>
 
 </view>
