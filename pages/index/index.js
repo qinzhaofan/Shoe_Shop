@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 const windowWidth = wx.getSystemInfoSync().windowWidth//img
+const windowheight = wx.getSystemInfoSync().windowHeight
 
 //Component
 Page({
@@ -20,6 +21,8 @@ Page({
   attached() {    
   },
   data: {
+    //scorll
+    height: windowheight,
     motto: '欢迎光临',
     userInfo: {},
 

@@ -1,0 +1,19 @@
+function tapName(event, ownerInstance) {
+  console.log('tap wechat', JSON.stringify(event))
+}
+module.exports = {
+  tapName: tapName
+}
+var funcA = function (e, ins) {
+  // console.log('source is', JSON.stringify(e))
+  var scrollTop = e.detail.scrollTop
+ 
+    ins.selectComponent('.page-group').setStyle({
+      //"background-color": 'rgb(255, 255, 255)',
+      "background-color": 'red'
+    })
+  
+}
+module.exports = {
+  funcA: funcA
+}
