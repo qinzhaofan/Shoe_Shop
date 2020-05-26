@@ -1,10 +1,21 @@
 <wxs module="scroll" src="scroll.wxs"></wxs>
 
-<scroll-view bindscroll="{{scroll.funcA}}" style='height:{{height}}px;' scroll-y>
+
+<scroll-view bindscroll="{{scroll.funcA}}" style='height:{{height}}px;' scroll-y
+  refresher-enabled="{{true}}"
+  refresher-threshold="{{100}}"
+  refresher-default-style="white"
+  refresher-background="rgb(233, 233, 233)"
+  refresher-triggered="{{triggered}}"
+  bindrefresherpulling="onPulling"
+  bindrefresherrefresh="onRefresh"
+  bindrefresherrestore="onRestore"
+  bindrefresherabort="onAbort">
   <view class="page-group">
     <view class="page-nav-list"><text>热销排行</text></view>
     <view class="page-nav-list"><text>新品上市</text></view>
   </view>
+
 
 <swiper class="swiper"  data-width="{{windowWidth}}" data-imgsize="{{imgSize}}" bindchange='{{test.change}}' bindanimationfinish="{{test.animationFinish}}" bindtransition="{{test.func}}" indicator-dots="{{indicatorDots}}"
   autoplay="{{true}}" interval="{{interval}}" circular='' duration="{{duration}} ">
@@ -48,6 +59,10 @@
    <image src="/images/index/hotcommodities.png" mode="aspectFit"/>
 </view>
 <block wx:for="{{shoesItems}}" wx:key="id">
+<x-shoes-Item shoesItem="{{item}}"/>
+<x-shoes-Item shoesItem="{{item}}"/>
+<x-shoes-Item shoesItem="{{item}}"/>
+<x-shoes-Item shoesItem="{{item}}"/>
 <x-shoes-Item shoesItem="{{item}}"/>
 </block>
 </view>

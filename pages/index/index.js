@@ -21,6 +21,7 @@ Page({
   attached() {    
   },
   data: {
+    triggered: false,
     //scorll
     height: windowheight,
     motto: '欢迎光临',
@@ -160,7 +161,11 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    setTimeout(() => {
+      this.setData({
+        triggered: true,
+      })
+    }, 1000)
   },
 
   /**
@@ -255,6 +260,28 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  onPulling(e) {
+    console.log('onPulling:', e)
+  },
+
+  onRefresh() {
+  
+    setTimeout(() => {
+      this.setData({
+        triggered: false,
+      })
+    
+    }, 2000)
+  },
+
+  onRestore(e) {
+    console.log('onRestore:', e)
+  },
+
+  onAbort(e) {
+    console.log('onAbort', e)
   },
   
   changeIndicatorDots: function (e) {
