@@ -1,0 +1,6 @@
+<!--pages/Demo-wxml-template/Demo-wxml-template.wxml-->
+<text>template-wxml模板的使用</text>
+
+<import src="itlike/itlike.wxml" />
+
+<template is="itlike" data="{{title: 'Python',desc:'大数据+人工'}}"/>

@@ -5,8 +5,8 @@
     "pages/merchants/merchants",
     "pages/login/login",
     "pages/logs/logs",
-    "pages/shoes-Item/shoes-Item"
-
+    "pages/shoes-Item/shoes-Item",
+    "pages/Demo-wxml-template/Demo-wxml-template"
    
   ],
   "window": {

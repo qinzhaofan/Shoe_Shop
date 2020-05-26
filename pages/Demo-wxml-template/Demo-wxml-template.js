@@ -1,45 +1,11 @@
-// pages/shoes-Item/shoes-Item.js
+// pages/Demo-wxml-template/Demo-wxml-template.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isDelete: false,
-    shoesItems:[
-      {
-      id :1,
-      shoesImg:"/images/index/1.jpg",
-      type:"春款女鞋",
-      model:"CT-H002",
-      price:"109"
-    },
-    {
-      id :2,
-      shoesImg:"/images/index/2.jpg",
-      type:"夏款女鞋",
-      model:"XT-H004",
-      price:"68"
-    },
-    {
-      id :3,
-      shoesImg:"/images/index/3.jpg",
-      type:"秋款女鞋",
-      model:"QT-H005",
-      price:"128"
-    },
-    {
-      id :4,
-      shoesImg:"/images/index/4.jpg",
-      type:"冬款女鞋",
-      model:"QT-H005",
-      price:"228"
-    }
-  ]
 
-  },
-  _handlerTap: function(evt){
-    console.log("id:",evt.target.id,evt.target.dataset.title)
   },
 
   /**

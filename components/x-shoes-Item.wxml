@@ -1,4 +1,5 @@
 <view class="shoesItem {{isDelete?'deleteItem':''}}"  bindlongpress="_deleteItem">
+  <view class="delBtn" hidden="{{!isDelete}}" bindtap="_handlerDelete">X</view>
   <image src="{{shoesItem.shoesImg}}" mode="aspectFit"/>
   <text  class="type">类型：<text class="type">{{shoesItem.type}}</text></text>
   <text class="">型号：<text class="model">{{shoesItem.model}}</text></text>

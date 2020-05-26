@@ -24,6 +24,28 @@ Component({
       this.setData({
         isDelete:true
       })
+    },
+    _handlerDelete: function(){
+      wx.showModal({
+        title:'是否删除',
+        content:'删除之后，会永久失去这个商品',
+        success: (res) => {
+          if(res.confirm){
+             wx.showToast({
+               title: '删除成功',
+             }),
+             this.setData({
+              isDelete:false
+           })
+          }else if (res.cancel){
+             this.setData({
+             isDelete:false
+          })
+         }
+      }
+       
+
+      })
     }
   }
 })

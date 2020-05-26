@@ -79,6 +79,12 @@
 					"pathName": "pages/shoes-Item/shoes-Item",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/Demo-wxml-template/Demo-wxml-template",
+					"pathName": "pages/Demo-wxml-template/Demo-wxml-template",
+					"scene": null
 				}
 			]
 		}

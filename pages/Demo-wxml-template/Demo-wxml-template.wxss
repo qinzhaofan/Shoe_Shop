@@ -1,0 +1,4 @@
+/* pages/Demo-wxml-template/Demo-wxml-template.wxss */
+.testT{
+  border: 1px  solid red;
+}

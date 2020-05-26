@@ -1,0 +1,7 @@
+<template name="itlike">
+<view class="testT">
+  <view>{{title}}</view>
+  <view>详情</view>
+  <view>{{desc}}</view>
+</view>
+</template>

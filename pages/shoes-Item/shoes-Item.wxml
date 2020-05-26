@@ -1,7 +1,12 @@
 <!--pages/shoes-Item/shoes-Item.wxml-->
-<view class="ItemContainer" >
-<block wx:for="{{shoesItems}}" wx:key="id"  >
-<x-shoes-Item   shoesItem="{{item}}"/>
+<!--<view class="ItemContainer"  bindtap="_handlerTap" >
+<block wx:for="{{shoesItems}}" wx:key="id" >
+<x-shoes-Item   shoesItem="{{item}}" />
 </block>
-
+</view>-->
+<view class="ItemContainer"  bindtap="_handlerTap" >
+<x-shoes-Item id="1" data-title="第一个课程"/>
+<x-shoes-Item id="2" data-title="第二个课程"/>
+<x-shoes-Item id="3" data-title="第三个课程"/>
+<x-shoes-Item id="4" data-title="第四个课程"/>
 </view>
