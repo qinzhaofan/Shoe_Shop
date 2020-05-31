@@ -22,7 +22,7 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -84,6 +84,13 @@
 					"id": -1,
 					"name": "pages/Demo-wxml-template/Demo-wxml-template",
 					"pathName": "pages/Demo-wxml-template/Demo-wxml-template",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/type/type",
+					"pathName": "pages/type/type",
 					"scene": null
 				}
 			]

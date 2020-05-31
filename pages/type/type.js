@@ -30,7 +30,7 @@ pageLifetimes: {
         IndexImg: "/images/1.jpg",
         IndexTitle: "标题测试",
         IndexTeacher:"秦测试",
-        IndexCount: 1500,
+        IndexCount: 153123,
         isStar: true,
       },{
         id:"1",

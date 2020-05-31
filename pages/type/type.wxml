@@ -18,10 +18,30 @@
   <view class="desc">
     <text class="courseTitle">{{var.IndexTitle}}</text>
     <text class="courseTeacher">讲师：{{var.IndexTeacher}}<text class="isStar" wx:if="{{var.isStar}}">  星级讲师</text></text>
-    <text class="courseStudyCount">学习人数：{{var.IndexCount >=1000 ? var.IndexCount/1000 + "K" : var.IndexCount}}人</text>
+   <!-- <text class="courseStudyCount">学习人数：{{var.IndexCount >=1000 ? var.IndexCount/1000 + "K" : var.IndexCount}}人</text>-->
+    <text class="courseStudyCount">学习人数：{{numTool.parseNum(var.IndexCount)}}人</text>
     <text>{{idx}}</text>
   </view>
 </view>
 </block>
 
 <view id="tapTest" data-hi="WeChat" bindtap="tapName"> Click me! </view>
+ <wxs module="numTool">
+      function parseNum(count){
+        if(count < 1000)
+        {
+          return count
+        }
+        if (count >=1000 && count <10000){
+          return (count/1000).toFixed(2) +  "K" 
+        }
+        if (count >=10000 ){
+          return (count/10000).toFixed(2) +  "W"
+        }
+
+      }
+
+      module.exports={
+        parseNum : parseNum
+      }
+    </wxs>
