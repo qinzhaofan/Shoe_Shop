@@ -1,13 +1,8 @@
 <!--pages/type/type.wxml-->
-  <view class="container">
-  <view class="icon-box-ctn">
-     <view>
-      <block >
-        <icon type="{{search}}" size="{{iconSize}}"/>
-        <icon type="{{clear}}" size="{{iconSize}}"/>
-      </block>搜索</view>
-  </view>
-</view>
+
+<x-searchBar/>
+     
+
 
 <!--如果通过 WXFOR 遍历数组 内部元素通过一个特性的变量名 item 来获取-->
 <block wx:for="{{setItems}}" wx:for-index="idx" wx:for-item="var" wx:key="id">
