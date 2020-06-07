@@ -74,8 +74,8 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "shoes-Item",
+					"id": 2,
+					"name": "pages/shoes-Item/shoes-Item",
 					"pathName": "pages/shoes-Item/shoes-Item",
 					"query": "",
 					"scene": null
@@ -91,6 +91,7 @@
 					"id": -1,
 					"name": "pages/type/type",
 					"pathName": "pages/type/type",
+					"query": "",
 					"scene": null
 				}
 			]

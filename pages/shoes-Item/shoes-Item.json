@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "x-shoes-Item":"/components/x-shoes-Item"
+    "x-shoes-Item":"/components/x-shoes-Item/x-shoes-Item"
   }
 }

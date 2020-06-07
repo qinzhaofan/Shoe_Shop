@@ -1,3 +1,4 @@
+<navigator url="/pages/logs/logs" open-type="switchTab">
 <view class="shoesItem {{isDelete?'deleteItem':''}}"  bindlongpress="_deleteItem">
   <view class="delBtn" hidden="{{!isDelete}}" bindtap="_handlerDelete">X</view>
   <image src="{{shoesItem.shoesImg}}" mode="aspectFit"/>
@@ -5,3 +6,4 @@
   <text class="">型号：<text class="model">{{shoesItem.model}}</text></text>
   <text>参考价格：<text class="price">{{shoesItem.price}}</text><text class="priceweight">￥</text></text>
 </view>
+</navigator>
