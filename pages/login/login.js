@@ -53,6 +53,46 @@ Page({
   onShow: function () {
     //隐藏了主页返回的按钮
     wx.hideHomeButton()
+    // https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx31e8e29ab6c28f30&secret=978a2ab79f48bb27302c89a46426fc1f
+    // https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=34_RJI5CrXDimMNxAP2VctI29MBEL4uPtSSWWd443BoeA2cX45_vv6NIrMzqJ6XczbP68Gf8pjMlrODiodd58njzB6ilg15JPiecgP7kLFhBPgYA3xNZEQc1JvR8CbaYJJylhqHfJhvMRT4hInSQPSeAGAYXA
+    // {
+//   "touser": "od8Yw5QrbKXOiouqmDhslaBd83_A",
+//   "template_id": "OU08FzuDB7bPqjzcLnBJ1P1foUroEL-sxwH_gpxMlo0",
+//   "page": "index",
+//   "miniprogram_state":"developer",
+//   "lang":"zh_CN",
+//   "data": {
+//       "thing2": {
+//           "value": "339208499"
+//       },
+//       "character_string1": {
+//           "value": "1121"
+//       },
+//       "time3": {
+//           "value": "2015年01月05日"
+//       } ,
+//       "thing4": {
+//           "value": "广州市新港中路397号"
+//       }
+//   }
+// }
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success (res) {
+        if (res.confirm) {
+          wx.requestSubscribeMessage({
+            tmplIds: ['OU08FzuDB7bPqjzcLnBJ1P1foUroEL-sxwH_gpxMlo0'],
+            success (res) {console.log(res) },
+            fail(err){console.log(err)}
+          })
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+   
   },
 
   /**
@@ -105,6 +145,7 @@ Page({
     wx.login({
       success: function(res){
         console.log(res)
+        
         //获取临时凭证
         var code = res.code
         console.log(getApp().globalData.localhost)
@@ -148,6 +189,7 @@ Page({
                 } 
                }
               })
+              
           }
         });
         
